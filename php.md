@@ -257,7 +257,7 @@ while문과 do while문 for문 foreach문을 모두 가지고 있다.
 
 <hr />
 
-## array_push
+### array_push
 
 별도의 함수를 호출하는 함수
 
@@ -281,7 +281,7 @@ while문과 do while문 for문 foreach문을 모두 가지고 있다.
 
 <hr />
 
-## 배열 원소를 제거하는 방법
+### 배열 원소를 제거하는 방법
 
 array_splice를 사용하면 배열 원소를 제거할 수 있다.
 
@@ -289,6 +289,114 @@ array_splice를 사용하면 배열 원소를 제거할 수 있다.
   <?php
     array_splice(array &$input , int $offset [, int $length = count($input) [, mixed $replacement = array() ]] ) : array
 ```
+
+<hr />
+
+### for
+
+```php
+  <?php
+    $arr = ['김민성', '노승재'];
+    
+    for($i = 0; $i < count($arr); $i++){
+      echo "{$i}의 이름 : {$arr[$i]}";
+    }
+```
+
+출력결과 : 1번의 이름 : 김민성
+           2번의 이름 : 노승재
+           
+<hr />
+ 
+### while
+
+```php
+  <?php
+    $arr = ['김민성', '노승재'];
+    
+    while(count($arr) > 0){
+      $item = array_pop($arr);
+      echo "{$item}을 꺼냈읍니다."
+    }
+```
+
+array_pop은 배열을 넣으면 뱌열에서 하나를 빼는 구조를 가지고 있다. 결과값은 빼어낸 원소를 반환하도록 되어있다.
+
+<hr />
+
+### foreach 
+
+$array 안에 있는 모든 것을 $value 라고 하고 $value에 대해 무엇인가를 작업할 때 사용한다.
+
+foreach는 키 => 밸류 기반의 배열이나 오브젝트에서 사용된다.
+
+```php
+  <?php
+    $human = ['name' => '김민성', 'age' => 18, 'job' => '고등학생'];
+    
+    foreach($human as $item){
+      echo "{$item}";
+    }
+```
+
+출력결과 : 김민성 18 고등학생
+
+<hr />
+
+## PHP 배열
+
+```php
+  $arr = [
+    [1,2,3,4,5],
+    [6,7,8,9,10]
+  ];
+  
+  for($i = 0; $i < 2;  $i++){
+    for()$jj = 0; $j < 2; $j++){
+      echo "{$data[$j][$i]}";
+    }
+    echo "<br>";
+  }
+```
+
+출력결과 :
+          
+          1 6
+          
+          2 7
+          
+          3 8
+          
+          4 9
+          
+          5 10
+           
+
+※ 배열 관련 함수
+
+is_array : 배열인지 확인하는 함수
+
+in_array : 배열에서 특정 원소가 존재하는 지 찾아주는 함수
+
+array_combine : 2개의 배열을 키와 값을 가지는 연관배열로 합치는 함수이다.
+
+array_chunk : 배열을 지정된 크기로 쪼개는 함수
+
+array_diff : 배열간의 차이점을 분석해주는 함수 
+
+arrat_diff_assoc : 배열간의 차이점과 인덱스까지 비교해주는 함수
+
+array_diff_uassoc : 배열 원소를 비교할 때 어떻게 비교할지 비교함수를 지정하여 처리하는 함수
+
+array_fill() : 시작 인덱스 값부터 지정된 객수만큼 지정된 값을 채워넣은 배열을 반환한다.
+
+array_shift() : 배열의 맨 앞에서 원소를 하나 제거하고 반환하는 함수
+
+array_unshift() : 배열의 맨 앞에 원소들을 집어넣고 집어넣어진 원소의 개수를 반환하는 함수이다.
+
+array_map : 배열을 특정함수에 맵핑시켜서 가공한 배열을 반환하는 함수이다.
+
+ 
 
 <hr />
 
