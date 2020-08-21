@@ -316,7 +316,7 @@ array_splice를 사용하면 배열 원소를 제거할 수 있다.
     
     while(count($arr) > 0){
       $item = array_pop($arr);
-      echo "{$item}을 꺼냈읍니다."
+      echo "{$item}을 꺼냈니다."
     }
 ```
 
@@ -568,5 +568,7 @@ $php test.php
 ※ 사용된 함수들
 
 ```file_exists``` : 해당 파일이 존재하는지 검사하는 함수
+
 ```fopen``` : 실제로 파일을 여는 함수
+
 ```filesize``` : 파일의 크기를 바이트 단위로 반환하는 함수
