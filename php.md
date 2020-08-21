@@ -625,7 +625,7 @@ $php test.php
 
 ```코드를 보면 enctype이 있는데 파일을 전송할때는 폼에 반드시 multipart/form-data를 적어주어야 파일이 전송이 된다.```
 
-<upload_ok.php>
+upload_ok.php
 
 ```php
   <?php
