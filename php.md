@@ -317,7 +317,7 @@ array_splice를 사용하면 배열 원소를 제거할 수 있다.
     
     while(count($arr) > 0){
       $item = array_pop($arr);
-      echo "{$item}을 꺼냈니다."
+      echo "{$item}을 꺼냈습니다."
     }
 ```
 
