@@ -437,8 +437,10 @@ job: 고등학생
 <hr />
 
 ## 날짜와 시간 다루기
-
-date (string $format [, int $timestamp = time() ] ): string
+```php
+  <?php
+    date (string $format [, int $timestamp = time() ] ): string
+```
 
 ```php
   echo date('Y-m-d') . "<br>";
