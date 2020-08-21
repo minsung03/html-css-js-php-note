@@ -447,9 +447,14 @@ date (string $format [, int $timestamp = time() ] ): string
   echo date('y, M , D') . "<br>";
 ```
 
-출력결과 : 2020-08-21
-           2020.08.21 11:09:23
-           21, Aug, Fri
+출력결과 : 
+```
+2020-08-21
+
+2020.08.21 11:09:23
+          
+21, Aug, Fri
+```
 
 <hr />
 
