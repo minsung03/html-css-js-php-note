@@ -634,3 +634,30 @@ upload_ok.php
     echo "</pre>";
 ```
 
+파일의 이름이나 내용은 업로드한 파일에 따라 달라진다.
+
+```$_FILES``` 라는 변수는 전역변수인데, 이 변수는 업로드된 모든 파일이 배열로 저장된다.
+
+upload_ok.php
+
+```php
+  $tmpName = $_FILES["upload"]["tmp_name"];
+  $realName = $_FILES["upload"]["name"];
+  
+  if(!file_exists("upload")){
+    mkdir("upload");
+  }
+  
+  move_uploaded_file($tmpName. "upload\" . $realName);
+```
+
+### move_uploaded_file
+
+move_uploaded_file은 업로드된 임시파일을 내가 지정한 폴더로 이동시켜주는 역할을 하는 함수이다.
+
+```php
+  <?php
+    move_uploaded_file(string $filename, string $destination ) : bool
+```
+
+위에 코드는 파일 이동 성공시 true를 반환하고 실패시 false를 반환한다.
