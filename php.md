@@ -400,3 +400,73 @@ array_map : 배열을 특정함수에 맵핑시켜서 가공한 배열을 반환
 
 <hr />
 
+## 정렬 관련 함수
+
+### sort
+
+배열을 정렬해주는 가장 기본적인 함수
+
+```php
+  <?php
+    sort(array &$arrat[, int $sort_flags = SORT_REGULAR ] ) : bool
+```
+
+<hr />
+
+### sort_flag
+
+어떤식으로 정렬할 지를 나타내는 것
+
+SORT_REGULAR : 타입을 변화시키지 않고 일반적인 방법으로 비교
+
+SORT_NUMERIC : 아이템들을 숫자로 변화시켜서 비교
+
+SORT_STRING : 아이템들을 문자열로서 비교
+
+SORT_LOCALSTRING : 현재 locale에 맞추어 문자열로 비교 (locale 값은 setlocale() 함수를 통해 변경가능)
+
+SORT_NATURAL : 아이템을 정렬할 때 자연정렬방식으로 정렬한다.
+
+※ 기본적으로 sort 함수는 오름차순으로 정렬하게 되어 있다.
+
+   내림차순으로 정렬하려면 rsort라는 함수를 사용하면 된다.
+   
+```php
+  <?php
+    rsort(array &$array [, int $sort_flags = SORT_REGULAR ] ) : bool
+```
+
+다만, sort 함수는 정렬이 되긴하지만 키값은 유지되지 않는다는 단점이 있다.
+
+그 외 sort 함수
+
+asort : 정렬이 이루어지고 난뒤에도 키 값을 유지시켜주는 함수
+
+ksort : 키를 기준으로 정렬해주는 함수
+
+usort : user가 정의한 비교방법으로 정렬하는 함수
+
+callback(mixed $a, mixed $b) : int
+
+
+<hr />
+
+## 날짜와 시간 다루기
+
+date (string $format [, int $timestamp = time() ] ): string
+
+```php
+  echo date('Y-m-d') . "<br>";
+  
+  echo date('Y.m.d' H:i:s') . "<br>";
+  
+  echo date('y, M , D') . "<br>";
+```
+
+출력결과 : 2020-08-21
+           2020.08.21 11:09:23
+           21, Aug, Fri
+
+<hr />
+
+##
