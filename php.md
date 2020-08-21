@@ -414,6 +414,7 @@ job: 고등학생
 - `SORT_STRING` : 아이템들을 문자열로서 비교
 - `SORT_LOCALSTRING` : 현재 locale에 맞추어 문자열로 비교 (locale 값은 setlocale() 함수를 통해 변경가능)
 - `SORT_NATURAL` : 아이템을 정렬할 때 자연정렬방식으로 정렬한다.
+
 ※ 기본적으로 sort 함수는 오름차순으로 정렬하게 되어 있다.
 
    내림차순으로 정렬하려면 rsort라는 함수를 사용하면 된다.
