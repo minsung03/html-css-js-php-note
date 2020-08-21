@@ -239,7 +239,7 @@ while문과 do while문 for문 foreach문을 모두 가지고 있다.
 
 정보없이 값만 들어가 있는 기본적인 방법
 
-값을 넣을때 -별도의 인덱스키와 값을 지정하는 방법
+값을 넣을때 별도의 인덱스키와 값을 지정하는 방법
 
 ```php
   <?php
@@ -317,7 +317,7 @@ array_splice를 사용하면 배열 원소를 제거할 수 있다.
     
     while(count($arr) > 0){
       $item = array_pop($arr);
-      echo "{$item}을 꺼냈습니다."
+      echo "{$item}을 꺼냈습니다.";
     }
 ```
 
@@ -523,7 +523,7 @@ job: 고등학생
 
 ```php
   <?php
-    $time = strtotime("2020-08-21 2:06:47")l
+    $time = strtotime("2020-08-21 2:06:47");
     
     echo date('Y-m-d h:i:s', "+10 day", $time));
 ```
