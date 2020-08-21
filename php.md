@@ -660,4 +660,5 @@ move_uploaded_file은 업로드된 임시파일을 내가 지정한 폴더로 �
     move_uploaded_file(string $filename, string $destination ) : bool
 ```
 
-위에 코드는 파일 이동 성공시 true를 반환하고 실패시 false를 반환한다.
+```위에 코드는 파일 이동 성공시 true를 반환하고 실패시 false를 반환한다.```
+
