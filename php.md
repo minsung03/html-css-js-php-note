@@ -582,3 +582,54 @@ $php test.php
 ```fopen``` : 실제로 파일을 여는 함수
 
 ```filesize``` : 파일의 크기를 바이트 단위로 반환하는 함수
+
+```fread``` : 파일의 내용을 읽어오는 역할을 한다.
+
+```fwrite``` : 파일을 생성하고 그 안에 내용을 기록할 수 있다.
+
+```file_get_contents``` : 파일 내용 전체를 읽어올 때 사용한다.
+
+<hr />
+
+## PHP 다른 파일을 가져오기
+
+```php
+  <?php
+    funtion dump($value){
+      echo "<div class='dump' style='display:inline-block; width: 50%;'>";
+      echo "<pre>";
+      var_dump($value);
+      echo "<pre>";
+      echo "</div>";
+  }
+```
+
+### ```_once``` 
+  
+  ```_once```라는 함수는 한번만 가져온다는 것을 뜻한다.
+  
+  또한 once가 붙는 함수는 require나 include된 파일을 다시 포함되지 않도록 막아준다
+  
+  ```php
+    <?php
+    require_once("lib.php"); // lib.php를 가져옴
+    $arr = [1,2,3];
+    dump($arr);
+  ```
+  
+### 파일 업로드와 다운로드
+
+```html
+  <form action="upload_ok.php" method="POST" enctype="multipart/form-data"></form>
+```
+
+```코드를 보면 enctype이 있는데 파일을 전송할때는 폼에 반드시 multipart/form-data를 적어주어야 파일이 전송이 된다.```
+
+<upload_ok.php>
+
+```php
+  <?php
+    echo "<pre>";
+    var_dump($_FILES);
+    echo "</pre>";
+```
