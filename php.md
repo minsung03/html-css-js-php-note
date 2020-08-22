@@ -829,3 +829,31 @@ level | Int |      |      |
 
 <hr />
 
+dbtest.php
+
+```php
+  <?php
+    $host = "localhost";
+    $dbname = "myblog";
+    $charset = "utf8mb4";
+    $user = "root";
+    $pass = "";
+    
+    $db = new PDO("mysql:host{$host}l dbname={$dbname}; charset={$charset}", $user, $pass);
+    
+    var_dump ={$db};
+```
+dbtest.php의 역할은 데이터베이스를 연결하는 것이다.
+
+각각 코드의 역할
+
+- 어떤 데이터베이스 유형인지(mysql)
+
+- 데이터베이스가 위치한 호스트는 어디인지(localhost)
+
+- 해당 호스트에서 어떤 데이터베이스에 접속하려고하는지(myblog)
+
+- 연결할 때 해당 데이터들의 인코딩은 어떤지.(utf8mb4)
+
+<hr />
+
