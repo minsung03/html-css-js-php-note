@@ -605,6 +605,7 @@ $php test.php
       echo "</div>";
   }
 ```
+<hr />
 
 ### ```_once``` 
   
@@ -618,6 +619,8 @@ $php test.php
     $arr = [1,2,3];
     dump($arr);
   ```
+
+<hr />
   
 ### 파일 업로드와 다운로드
 
@@ -653,6 +656,8 @@ upload_ok.php
   move_uploaded_file($tmpName. "upload\" . $realName);
 ```
 
+<hr />
+
 ### move_uploaded_file
 
 move_uploaded_file은 업로드된 임시파일을 내가 지정한 폴더로 이동시켜주는 역할을 하는 함수이다.
@@ -663,6 +668,8 @@ move_uploaded_file은 업로드된 임시파일을 내가 지정한 폴더로 �
 ```
 
 ```위에 코드는 파일 이동 성공시 true를 반환하고 실패시 false를 반환한다.```
+
+<hr />
 
 ### readfile
 
@@ -770,6 +777,7 @@ move_uploaded_file은 업로드된 임시파일을 내가 지정한 폴더로 �
   $h1 = new Human("김민성", ["프로그래밍", "농구"]);
   $h2 = clone $h1;
 ```
+
 <hr />
 
 ### 클래스의 상속
@@ -782,6 +790,8 @@ move_uploaded_file은 업로드된 임시파일을 내가 지정한 폴더로 �
 spl_autoload_register는 오토로드 함수들의 큐의 맨 마지막에 새롭게 함수를 추가한다.
 
 하지만 마지막 prepend변수를 true로 설정하면 큐의 맨뒤가 아니라 맨 앞으로 함수를 추가한다.
+
+<hr />
 
 ### PHP namespace
 
