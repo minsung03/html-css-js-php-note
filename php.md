@@ -1,4 +1,6 @@
-# 초딩도 이해하는 PHP 기본
+# 초딩도 이해하는 PHP 기본 
+
+### 작성자 : 김민성
 
 ## PHP 작성법
 
@@ -756,3 +758,63 @@ move_uploaded_file은 업로드된 임시파일을 내가 지정한 폴더로 �
 
 <hr />
 
+### PHP 클래스
+
+클래스는 변수, 상수, 함수를 포함하는 객체이다. 
+
+클래스 안에서 함수는 메소드라고 한다.
+
+객체를 복사해야 할때는 clone이라는 키워드를 이용하여 복사한다.
+
+```php
+  $h1 = new Human("김민성", ["프로그래밍", "농구"]);
+  $h2 = clone $h1;
+```
+<hr />
+
+### 클래스의 상속
+
+```php
+  <?php
+    spl_autiload_register([callable $autoload_function [, bool $prepend = FALSE]]] ) : bool
+```
+
+spl_autoload_register는 오토로드 함수들의 큐의 맨 마지막에 새롭게 함수를 추가한다.
+
+하지만 마지막 prepend변수를 true로 설정하면 큐의 맨뒤가 아니라 맨 앞으로 함수를 추가한다.
+
+### PHP namespace
+
+namespace란 같은 이름의 클래스가 있어도 다른 이름 공간에 있다면 이것은 다른 클래스로 인식하는 것이다.
+
+```php
+  <?php
+    namespace Gondr;
+    
+    class Human {
+      public $name;
+      public $hobbies = [];
+      
+    }
+```
+
+<hr />
+
+## PHP Database Object - PDO
+
+PDO 기본 사용
+
+PHP Data Object의 줄임말
+
+PDO란 PHP에서 사용하던 각 데이터베이스별로 접속이 상이한 방식을 벗어나 손쉽게 데이터베이스에 접속하기 위해서 만들어진 데이터베이스 오브젝트이다.
+
+생성된 테이블의 모양
+
+이름 | 종류 | 길이 | 인덱스
+---- | ---- | ---- | ---- |
+id | varchar | 100 | primary key
+name | varchar | 100 |    |
+password | varchar | 100 |     
+level | Int |      |      |
+
+<hr />
