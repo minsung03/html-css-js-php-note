@@ -666,5 +666,54 @@ move_uploaded_file은 업로드된 임시파일을 내가 지정한 폴더로 �
 
 함수의 내용을 읽어서 아웃버퍼로 출력해주는 함수
 
+```php
+  <?php
+    readfile(string $filename [, bool $use_include_path = FALSE [, resource $context ]] ) : int
+```
+
+```나중에 if문을 활용하여 권한이 없는 사용자는 파일 다운로드가 되지 않도록 하면 된다.```
+
 <hr />
+
+## PHP 함수와 클래스
+
+### 사용자 정의 함수 만들기
+
+```php
+  <?php
+    function test($param1, $param2){
+      $param1 = $param1 + 20;
+      $param2 = $param2 + 10;
+      
+      return $param1 + param2;
+    }
+    $a = 20;
+    $b = 30;
+    
+    $result = test($a, $b);
+    echo $result . "\n";
+    echo $a . "\n";
+    echo $b . "\n";
+```
+
+출력결과 :
+```
+  80
+  
+  20
+  
+  30
+```
+
+```코드를 보면 함수안에서 $a 와 $b 값이 더해져서 나온결과가 리턴되지만  a,b 값은 변경되지 않았다. 이러한 것을 값에 의한 전달이라고 한다.```
+
+```참조에 의한 전달로 보내고 싶다면 매개변수에 &를 붙혀서 참조처리하면 된다```
+
+```php
+  <?php
+    fucntion test(&$param1, $param2){
+      $param1 = $param1 + 20;
+      $param2 = $param2 + 10;
+    }
+```
 
