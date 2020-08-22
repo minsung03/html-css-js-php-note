@@ -828,7 +828,7 @@ password | varchar | 100 |
 level | Int |      |      |
 
 <hr />
-
+0
 dbtest.php
 
 ```php
