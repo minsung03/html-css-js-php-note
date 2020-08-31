@@ -857,3 +857,16 @@ dbtest.php의 역할은 데이터베이스를 연결하는 것이다.
 
 <hr />
 
+## PDO를 통해 SQL 작업하기
+
+```php
+  $sql = "INSERT INTO users (`id`, `name`, `password`, `level)
+  VALUES('ms0716', '김민성', 'PASSWORD('1234'), 1')";
+  
+  $db->exec($sql);
+```
+
+ ```이 코드는 SQL INSERT문에서 고정된 값을 INSERT 하도록 되어있다.```
+
+<hr />
+
