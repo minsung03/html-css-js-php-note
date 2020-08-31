@@ -868,5 +868,72 @@ dbtest.php의 역할은 데이터베이스를 연결하는 것이다.
 
  ```이 코드는 SQL INSERT문에서 고정된 값을 INSERT 하도록 되어있다.```
 
+```exec 메서드는 PDO 클래스에서 단순하게 쿼리를 실행해주는 역할을 하고있다. 만약 쿼리가 insert 도는 delete와 같이 조회값이 없으면 row 숫자를 리턴해준다.```
+
+```SELECT와 같이 조회값이 있는 쿼리라면 exec로는 실행할 수 없다. 조회값을 가져오려면 query라는 별도의 메서드를 사용해야 한다.```
+
+- 코드 수정
+
+```php
+  <?php
+    $sql = "INSERT INTO users(`id`, `name`, `password`, `level`)
+            VALUES('ms0716', '김민성', PASSWORD('1234'), 1)";
+            
+    $db -> exec($sql);
+    
+    $host = "localhost";
+    
+    $dbname = "myblog";
+    
+    $charset = "utf8mb4";
+    
+    $user = "root";
+    
+    $pass = "";
+    
+    $db = new PDO("mysql:host={$host}; dbname = {$dbname}; charset = {$charset}" , $user, $pass);
+    
+    $sql = "SELECT * FROM users";
+    
+    $result = $db->query($sql);
+    
+    echo "<pre>";
+    
+    echo "<br><br>";
+    
+    var_dump($result);
+```
+
+결과
+```
+  query를 통해 가져온 결과 값은 fetch라는 특수한 동작을 통해서 값을 가져올 수 있는 PDOStatement 객체이다. 
+  
+  이곳에서 값을 가져올 때는 foreach로 돌리거나 fetch 나 fetchAll을 사용해야 한다.
+  
+  foreach로 돌려야하는 이유는 배열이아니라 객체(object)이기 떄문이다
+  
+  해당 객체의 public 멤버는 queryString 밖에 없기 때문에 var_dump로 출력한다면 단순한 오브젝트 쿼리가 나오게 된다.
+  
+  
+```
 <hr />
+
+### fetchAll
+
+값을 리스트로 가져오고 싶으면 fetchAll을 사용하면 된다.
+
+```php
+  <?php
+    $list = $result->fetchAll();
+    
+    echo "<pre>";
+    
+    var_dump($list);
+    
+    echo "</pre>";
+```
+
+```
+fetchAll은 리스트 형태로 값을 가져온다. 만약 첫번째부터 한 개씩 가져오고 싶다면 순서대로 fetch()를 호출해주면 한개씩 넘어온다. id의 경우 ["id"]로도 값이 담기고 [0]에도 값이 담긴다.
+```
 
